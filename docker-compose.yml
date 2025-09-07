@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  todolist-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: todolist_api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - todolist-api-db
+    restart: always
+
+  todolist-api-db:
+    image: postgres:15
+    container_name: todolist_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: todolist_db
+    volumes:
+      - postgres_todolist_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  postgres_todolist_data: {}
