@@ -105,35 +105,6 @@ def secure_endpoint():
 
 A implementação de controles baseados no OWASP API Security Top 10 garante proteção contra as vulnerabilidades mais comuns em APIs. Cada categoria requer controles específicos e validação contínua.
 
-**Implementação de Controles para Top 10 Vulnerabilidades**
-
-1. **API1:2023 Broken Object Level Authorization**
-    
-    ```python
-    def check_object_access(user_id: str, object_id: str, action: str) -> bool:
-        """Verifica se usuário tem acesso ao objeto específico"""
-        # Implementar verificação granular de acesso a objetos
-        object_owner = get_object_owner(object_id)
-        user_permissions = get_user_permissions(user_id)
-        
-        if object_owner == user_id:
-            return True
-        if f"{action}_{object_id}" in user_permissions:
-            return True
-        return False
-    ```
-    
-2. **API2:2023 Broken Authentication**
-    
-    ```python
-    def implement_secure_authentication():
-        """Implementa autenticação segura"""
-        # Múltiplos fatores de autenticação
-        # Tokens com expiração
-        # Proteção contra ataques de força bruta
-        # Gestão segura de sessões
-        pass
-    ```
 ---
 
 ### **Estudo de Caso Prático: Análise de Vulnerabilidades na API ToDoList**
