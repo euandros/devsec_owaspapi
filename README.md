@@ -1,4 +1,4 @@
-# Estudo Sobre Desenvolvimento Seguro
+# Estudo Sobre Desenvolvimento Seguro de APIs
 O **OWASP API Security Risks** é um projeto da OWASP (Open Web Application Security Project) que visa identificar e descrever os principais riscos de segurança associados ao uso de APIs. Esses riscos representam ameaças potenciais às APIs e podem comprometer a integridade, confidencialidade e disponibilidade dos dados. O que se segue é a materialização do estudo que tenho feito sobre o tema e, por ser um estudo, não se trata de algo definitivo, mas sim em desenvolvimento contínuo.
 
 **Principais Ameaças**:
